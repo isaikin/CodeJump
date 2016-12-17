@@ -12,6 +12,7 @@ window.Game = {
         sprite:null,
         player:null,
         bullet:null,
-        enemy:null
+        enemy:null,
+        bonus:null
     }
 };

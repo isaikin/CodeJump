@@ -1,6 +1,8 @@
 'use strict';
 window.Game.modules.input = (function() {
-    var _pressedKeys = {};
+    var _pressedKeys = {},
+    _eventReset = new Event('reset',{bubbles: false, cancelable: false}),
+     _btnPlayAgain = document.getElementById('BtnPlayAgain');;
 
     function setKey(event, status) {
         var _code = event.keyCode,
@@ -34,9 +36,13 @@ window.Game.modules.input = (function() {
     window.addEventListener('blur', function() {
         _pressedKeys = {};
     });
+    _btnPlayAgain.addEventListener('click', function() {
+        _eventReset.preventDefault();
+    });
     return {
         isDown: function(key) {
             return _pressedKeys[key.toUpperCase()];
         },
+        EventReset :_eventReset
     };
 })();

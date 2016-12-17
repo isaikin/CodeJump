@@ -4,9 +4,10 @@ window.Game.entities.bullet = (function () {
         _bullet;
 
 
-    _bullet = function (position, url, pos, size, speed, frames, dir, once) {
-        this.sprite = new _sprite.Sprite(url, pos, size, speed, frames, dir, once);
+    _bullet = function (position, url, pos, size, speed, frames,bulletSpeed) {
+        this.sprite = new _sprite.Sprite(url, pos, size, speed, frames);
         this.pos = position;
+        this.bulletSpeed = bulletSpeed;
     };
 
     return {
