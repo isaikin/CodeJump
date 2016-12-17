@@ -7,15 +7,16 @@ window.Game.settings = (function () {
         _bulletSpeed,
         _entities;
 
-    _canvasWidth = document.documentElement.clientWidth - 100;
-    _canvasHeight = document.documentElement.clientHeight - 100;
+    _canvasWidth = document.documentElement.clientWidth - 10;
+    _canvasHeight = document.documentElement.clientHeight - 10;
     _playerSpeed = 100;
     _bulletSpeed = 200;
     _entities = {
         enemies : 0,
         bullet : 1,
         explosions:2,
-        bonus:3
+        bonus:3,
+        enemy : 4
     };
     return {
         CANVAS_WIDTH : _canvasWidth,

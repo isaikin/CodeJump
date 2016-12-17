@@ -11,6 +11,7 @@ window.Game = {
     entities:{
         sprite:null,
         player:null,
-        bullet:null
+        bullet:null,
+        enemy:null
     }
 };
